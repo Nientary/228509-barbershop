@@ -1,0 +1,22 @@
+body {
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.goods-item h2 {
+    font-size: 14px;
+    line-height: 18px;
+}
