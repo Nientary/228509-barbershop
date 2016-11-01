@@ -1,14 +1,196 @@
+/*outline для наглядности*/
+
+footer,
+header,
+.container,
+.container > div,
+.container > section,
+.goods-item, 
+nav,
+ul,
+.main-header .logo,
+.main-footer section,
+.item-photos > img,
+table {
+    outline: 1px solid black;
+}
+
+/*Общее для всех страниц*/
+
 body {
+    padding: 0;
+    margin: 0;
     font-size: 14px;
     line-height: 24px;
+    text-transform: uppercase;
     color: black;
     font-family: "PT Sans Narrow", sans-serif;
     font-weight: bold;
 }
 
+.main-header {
+    margin-bottom: 50px;
+}
+
+header .logo {
+    float: left;
+    min-height: 72px;
+    width: 140px;
+    margin-right: 20px;
+}
+
+nav.main-menu {
+    float: left;
+    min-height: 72px;
+    padding-top: 0;
+    margin-top: 0;
+    width: 540px;
+    font-size: 0;
+}
+
+.main-menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu li {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.main-menu li:last-child {
+    margin-right: 0;
+}
+
+.main-menu a {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.user-block {
+    float: right;
+    margin-right: 0;
+    min-height: 72px;
+    width: 140px;
+    margin-right: 0;
+}
+
+.container {
+    width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 h1 {
     font-size: 30px;
     line-height: 42px;
+    margin-bottom: 17px;
+}
+
+.breadcrumbs {
+    padding: 0;
+    list-style: none;
+    line-height: 20px;
+    margin-bottom: 49px;
+}
+
+.breadcrumbs li {
+    display: inline;
+        
+}
+
+.main-footer {
+    margin-top: 49px;
+}
+
+.main-footer .container {
+    padding-top: 41px;
+    padding-bottom: 38px;
+}
+
+.contacts {
+    float: left;
+    width: 310px;
+    margin-top: 0;
+    padding-top: 0;
+    margin-right: 90px;
+}
+
+.social-buttons {
+    float: left;
+    min-width: 140px;
+}
+
+.creators-info {
+    float: right;
+    width: 140px;
+}
+
+
+/*Каталог*/
+
+.goods-item h2 {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.filters {
+    width: 210px;
+    float: left;
+}
+
+div.filter {
+    padding: 0;
+}
+
+.filters ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filters h2 {
+    margin-top: 0;
+}
+
+.filter input {
+    margin-bottom: 17px;
+}
+
+.shop-right {
+    float: right;
+    width: 700px;
+}
+
+.goods {
+    font-size: 0;
+    padding-top: 5px;
+    margin-bottom: 24px;
+        
+}
+
+.goods-item {
+    display: inline-block;
+    width: 220px;
+    vertical-align: top;
+    font-size: 14px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.goods-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.goods-item > a {
+    display: block;
+    height: 165px;
 }
 
 h2 {
@@ -17,6 +199,185 @@ h2 {
 }
 
 .goods-item h2 {
+    margin-bottom: 15px;
+}
+
+h2 .category {
+    text-transform: none;
+}
+
+.price-block {
+    font-size: 0;
+    line-height: 0;
+}
+
+.price-block .price {
+    display: inline-block;
+    padding-left: 29px;
+    padding-right: 25px;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 24px;
+}
+
+.price-block .btn {
+    display: inline-block;
+    padding-left: 19px;
+    padding-right: 17px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.paginator {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+.paginator li {
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.paginator li a {
+    display: block;
+    min-width: 43px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
     font-size: 14px;
     line-height: 18px;
+}
+
+
+/*Страница товара*/
+
+.item-photos {
+    float: left;
+    width: 460px;
+    padding-bottom: 0;
+    
+}
+
+.item-photos > img {
+    margin-bottom: 21px;
+    height: 498px;
+}
+
+.item-info {
+    float: right;
+    width: 390px;
+    padding-top: 24px;
+}
+
+.previews {
+    font-size: 0;
+    line-height: 0;
+}
+
+.previews a {
+    display: inline-block;
+    margin-right: 20px;
+    height: 149px;
+}
+
+.previews a:last-child {
+    margin-right: 0;
+}
+
+.item-info .first-line {
+    margin-bottom: 32px;
+}
+
+.item-info .article {
+    float: right;
+}
+
+.item-info p {
+    margin-bottom: 34px;
+}
+
+.item-info .price-block {
+    margin-bottom: 64px;
+}
+
+.item-info h2 {
+    margin-bottom: 26px;
+}
+
+.item-info ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+/*Прайс-лист*/
+
+div.promo {
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.left {
+    float: left;
+    width: 380px;
+}
+
+.right {
+    float: right;
+    width: 460px;
+    padding-bottom: 15px;
+}
+
+.left h2 {
+    margin-top: 0;
+    width: 300px;
+}
+
+
+.left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 58px;
+    padding-top: 7px;
+}
+
+.left ul li {
+    margin-bottom: 14px;
+}
+
+.left p {
+    padding-top: 5px;
+}
+
+.right h2 {
+    width: 200px;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+table.price {
+    min-height: 104px;
+    padding: 0;
+    border-collapse: collapse;
+    margin-bottom: 120px;
+}
+
+table.price td {
+    width: 227px;
+    border: 2px solid black;
+    padding-top: 6px;
+    padding-bottom: 8px;
+}
+
+.right p {
+    width: 370px;
 }
